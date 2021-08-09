@@ -14,6 +14,10 @@ BEGIN
 6. fetch detail of each word using API
 7. set synonyms , partofspeech out of fetch detail for each word - getWordDetails()
 8. display array of words with word being object consisting details like word, count, synonyms & part of speeech.
----
-End
+
+-----
+
+END
+
+-----
 
