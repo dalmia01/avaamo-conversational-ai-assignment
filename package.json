@@ -1,0 +1,14 @@
+{
+  "name": "conversational-ai-exercise",
+  "version": "1.0.0",
+  "description": "avaamo conversation ai first round ",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "scripts":{
+    "start":"node index.js"
+  }
+}
