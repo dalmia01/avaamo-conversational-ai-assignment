@@ -18,7 +18,7 @@ const setWordsWithOccurences = (words) =>
 
 const sortWordsWithCount = (wordsWithCount) => Object.entries(wordsWithCount).sort(({ 1: a }, { 1: b }) => b - a);
 
-const getWordDetails = (detail, word) => {
+const setWordDetails = (detail, word) => {
     let wordDetail = {
         word: word[0],
         output: {
@@ -54,7 +54,7 @@ app.listen(PORT, async () => {
 
     for (let word of topWordsObj) {
         let detail = await fetch(`${DETAILS_URL}${word[0]}`).then((res) => res.json());
-        wordsList.words.push(getWordDetails(detail, word));
+        wordsList.words.push(setWordDetails(detail, word));
     }
 
     console.log(wordsList);
