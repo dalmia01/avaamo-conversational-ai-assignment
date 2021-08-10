@@ -65,6 +65,8 @@ app.listen(PORT, async () => {
         wordsList.words.push(setWordDetails(detail, word));
     }
 
-    /** 3. show words in json formai */
+    /** 3. show words in json format */
+    console.log('-----------------');
     console.log(JSON.stringify(wordsList));
+    console.log('-----------------');
 });
