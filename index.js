@@ -44,18 +44,27 @@ const setWordDetails = (detail, word) => {
 
 app.listen(PORT, async () => {
     console.log(`server started @${PORT}`);
+
+    /** 1. Fetched document from given url */
     const text = await fetch(TEXT_URL).then((res) => res.text());
+
+    /** 2. a) Find occurences count of words */
     let words = getAllWords(text);
     let wordsWithCount = setWordsWithOccurences(words);
+
+    /** 2. b) taken top 10 words */
     let topWordsObj = sortWordsWithCount(wordsWithCount);
     topWordsObj.length = 10;
 
+    
     let wordsList = { words: [] };
 
+    /** 2. b) i) & ii) fetch detaisl of each each word */
     for (let word of topWordsObj) {
-        let detail = await fetch(`${DETAILS_URL}${word[0]}`).then((res) => res.json());
+        let detail = await fetch(`${DETAILS_URL}${word[0]}`).then((res) => res.json());        
         wordsList.words.push(setWordDetails(detail, word));
     }
 
-    console.log(wordsList);
+    /** 3. show words in json formai */
+    console.log(JSON.stringify(wordsList));
 });
