@@ -4,14 +4,16 @@ Conversation AI Assignment
 
 #windows system steps
 
-#Steps - to run assignment
+
+Steps - to run assignment
 
 1. Make a new folder
 2. git init
-3. git clone https://github.com/dalmia01/avaamo-conversational-ai-assignment.git
-4. yarn install
-5. yarn start
-6. Output will get displayed.
+3. git clone git@github.com:dalmia01/avaamo-conversational-ai-assignment.git
+4. cd avaamo-conversational-ai-assignment
+5. yarn install
+6. yarn start
+7. Output will get displayed.
 
 
 
