@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 6000;
 
 const TEXT_URL = "http://norvig.com/big.txt";
 const API_KEY = "dict.1.1.20210216T114936Z.e4989dccd61b9626.373cddfbfb8a3b2ff30a03392b4e0b076f14cff9";
-
 const DETAILS_URL = `https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=${API_KEY}&lang=en-ru&text=`;
 
 const getAllWords = (text) => text.toLowerCase().replace(/[\.]+/g, " ").split(" ").filter(Boolean);
@@ -59,7 +58,7 @@ app.listen(PORT, async () => {
     
     let wordsList = { words: [] };
 
-    /** 2. b) i) & ii) fetch detaisl of each each word */
+    /** 2. b) i) & ii) fetch details of each each word */
     for (let word of topWordsObj) {
         let detail = await fetch(`${DETAILS_URL}${word[0]}`).then((res) => res.json());        
         wordsList.words.push(setWordDetails(detail, word));

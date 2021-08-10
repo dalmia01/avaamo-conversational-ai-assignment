@@ -5,7 +5,8 @@ Conversation AI Assignment
 #windows system steps
 
 
-Steps - to run assignment
+STEPS - to run assignment
+-------------------------
 
 1. Make a new folder
 2. git init
